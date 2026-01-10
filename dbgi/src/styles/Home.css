@@ -912,7 +912,9 @@ footer input[type="email"] {
     width: 100%;
     font-size: 1rem;
   }
-  
+  .nav-links a.active {
+    border-bottom: none;
+  }
   .about-content {
     flex-direction: column;
     gap: 40px;
@@ -993,6 +995,9 @@ footer input[type="email"] {
     text-align: left;
     width: 100%;
   }
+    .nav-links a.active {
+    border-bottom: none;
+  }
   
   .mobile-menu-toggle {
     display: block;
@@ -1030,6 +1035,9 @@ footer input[type="email"] {
   
   .header-container {
     flex-wrap: nowrap;
+  }
+  .nav-links a.active {
+    border-bottom: none;
   }
   
   .logo {
@@ -1096,5 +1104,9 @@ footer input[type="email"] {
   .btn {
     padding: 10px 20px;
     font-size: 0.9rem;
+  }
+  .nav-links a.active {
+    color: rgb(0, 0, 255);
+    border-bottom: 2px solid transparent;
   }
 }

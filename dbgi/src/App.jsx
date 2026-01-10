@@ -1,20 +1,12 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import { Route, Routes } from "react-router-dom";
-import Home from './pages/Home'
-import HeroSection from "./components/HeroSection";
+import React from 'react'
+import Home from './components/Home'
 
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <HeroSection />
-      
-      <Routes>
-        <Route path="/home" element={<Home />} />
-      </Routes>
+      <Home />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

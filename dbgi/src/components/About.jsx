@@ -28,7 +28,7 @@ const About = (
                 {contentDescription}
               </p>
               {showButtons && (
-                <Link to="/about" className="btn about-cta">
+                <Link to="/pages/about-us" className="btn about-cta">
                   {btnText}
                 </Link>
               )}

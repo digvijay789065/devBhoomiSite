@@ -55,7 +55,7 @@ const Navbar = ({
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/about">About Us</Link>
+                <Link to="/pages/about-us">About Us</Link>
               </li>
               <li>
                 <Link to="#">Admissions</Link>

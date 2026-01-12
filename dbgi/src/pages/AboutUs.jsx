@@ -45,7 +45,7 @@ const AboutUs = () => {
               chosen fields."
         
         btnText="Explore Our Campus"
-        btnRoute="/about"
+        btnRoute="/pages/about-us"
       />
 
       <section class="leadership">

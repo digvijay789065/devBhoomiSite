@@ -65,6 +65,54 @@ const Home = () => {
       author: "Sakshi Pundir",
       role: "BTECH(CSE) 2024-28",
     },
+    {
+      content:
+        "From advanced labs to interactive workshops, the exposure I received shaped my understanding of how industries actually work.”",
+      author: "Himanshu Sharma",
+      role: "BTECH(CSE) 2023-27",
+    },
+    {
+      content:
+        "“I learned to think creatively and solve problems rather than just memorize theories. That mindset changed everything for me.”",
+      author: "Mahima Saini",
+      role: "BTECH(CSE) 2023-27",
+    },
+    {
+      content:
+        "“The campus feels like a second home. The friendships, faculty support, and opportunities here shaped my entire college journey.”",
+      author: "Digvijay Singh Pundir",
+      role: "BTECH(CSE) 2023-27",
+    },
+    {
+      content:
+        "“Joining this institute was the turning point of my academic life. Every day here motivates me to aim higher and become better.”",
+      author: "Aakarshi Vashishtha",
+      role: "BTECH(CSE) 2023-27",
+    },
+    {
+      content:
+        "The industry visits and guest lectures from professionals gave us real-world insights that textbooks alone can't provide. This exposure was crucial for my career decisions.”",
+      author: "Yasar Arif",
+      role: "BTECH(EEE) 2023-27",
+    },
+    {
+      content:
+        "“The cultural clubs here gave me a space to express myself. Whether it was dance, poetry, or open-mic nights, I finally felt seen.”",
+      author: "Lakshay Kamboj",
+      role: "BTECH(CSE) 2024-28",
+    },
+    {
+      content:
+        "“The photography club allowed me to explore my creative side. Capturing campus life became my favorite escape from everyday stress.”",
+      author: "Lavish Chaudhary",
+      role: "BBA 2022-25",
+    },
+    {
+      content:
+        "“The annual music nights helped me overcome my stage fear. Performing in front of such a supportive crowd felt magical.”",
+      author: "Saksham Sharma",
+      role: "BBA 2022-2025",
+    }
   ];
 
   const campusCards = [
@@ -111,7 +159,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTestimonialSlide((prev) => (prev + 1) % testimonials.length);
-    }, 7000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 

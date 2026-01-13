@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = ({ 
     subscribed, 
@@ -36,15 +37,14 @@ const Footer = ({
                   href: "https://www.youtube.com/@dbgisaharanpurofficial",
                 },
               ].map((social, index) => (
-                <a
+                <Link
                   key={index}
-                  href={social.href}
-                  target="_blank"
+                  to={social.href}
                   rel="noopener noreferrer"
                   aria-label={`${social.icon.split("-")[1]} social media`}
                 >
                   <i className={`fab ${social.icon}`}></i>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -57,16 +57,16 @@ const Footer = ({
               "Admissions",
               "Campus Life",
             ].map((link, index) => (
-              <a
+              <Link
                 key={index}
-                href={`#${link.toLowerCase().replace(" ", "-")}`}
+                to={`#${link.toLowerCase().replace(" ", "-")}`}
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection(link.toLowerCase().replace(" ", "-"));
                 }}
               >
                 {link}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="footer-column">
@@ -78,9 +78,9 @@ const Footer = ({
               "Alumni Network",
               "Campus Map",
             ].map((resource, index) => (
-              <a key={index} href="#">
+              <Link key={index} href="#">
                 {resource}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="footer-column">

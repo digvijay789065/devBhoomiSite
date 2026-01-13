@@ -1,0 +1,355 @@
+.courses-hero {
+  height: 90vh;
+  background: linear-gradient(rgba(0, 0, 255, 0.0), rgba(0, 0, 255, 0.35)),
+    url("../assets/images/courses-hero.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0 60px;
+  position: relative;
+  color: white;
+  margin-top: 70px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  text-align: center; 
+}
+
+.courses-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.courses-container {
+  display: flex;
+  width: 100%; 
+  justify-content: center; 
+  align-items: center; 
+  position: relative;
+  z-index: 2;
+}
+
+.courses-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 900px; 
+}
+
+.courses-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.courses-hero p {
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  max-width: 600px;
+  margin: 0 auto; 
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .courses-hero {
+    padding: 130px 0 70px;
+    background-size: cover;
+  }
+  
+  .courses-hero h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-hero {
+    height: 60vh; 
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 40px; 
+  }
+
+  .courses-hero::before {
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  .courses-hero-content {
+    padding: 20px;
+  }
+
+  .courses-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .courses-hero p {
+    display: block; 
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .courses-hero {
+    height: 50vh;
+    padding: 100px 0 30px;
+  }
+
+  .courses-hero h1 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .courses-hero p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .courses-hero {
+    height: 45vh;
+    padding: 90px 0 20px;
+  }
+
+  .courses-hero h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .courses-hero p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+}
+
+/* Landscape mode for phones */
+@media (max-height: 500px) and (orientation: landscape) {
+  .courses-hero {
+    height: auto;
+    min-height: 300px;
+    padding: 80px 0 30px;
+  }
+
+  .courses-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .courses-hero p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+}
+
+/* iPhone notch support */
+@supports (padding: max(0px)) {
+  .courses-hero {
+    padding-top: max(120px, calc(120px + env(safe-area-inset-top)));
+  }
+}
+
+.institutions {
+    background: #f8f9fa;
+  }
+
+  /* Tab navigation */
+  .institution-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tab-btn {
+    padding: 12px 25px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+  }
+
+  .tab-btn.active {
+    background: var(--primary);
+    color: white;
+  }
+
+  .tab-btn:hover:not(.active) {
+    background: #e2e8f0;
+  }
+
+  /* Institution content areas */
+  .institution-content {
+    display: none;
+  }
+
+  .institution-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+  }
+
+  /* Fade in animation for content */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Institution header */
+  .institution-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .institution-header h3 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+
+  .institution-header p {
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Courses grid layout */
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  /* Course card styles */
+  .course-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+  }
+
+  .course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Course image container */
+  .course-img {
+    height: 200px;
+    overflow: hidden;
+    background: #e2e8f0; /* Fallback background if image doesn't load */
+  }
+
+  .course-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+
+  .course-card:hover .course-img img {
+    transform: scale(1.1);
+  }
+
+  /* Course content area */
+  .course-content {
+    padding: 25px;
+  }
+
+  .course-content h4 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+
+  .course-content .duration {
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  .course-content p {
+    margin-bottom: 15px;
+    color: #666;
+  }
+
+  /* Course features list */
+  .course-features {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  .course-features li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 25px;
+  }
+
+  .course-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+    .why-choose {
+    background: white;
+  }
+
+  /* Features grid layout */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  /* Feature card styles */
+  .feature-card {
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    transition: var(--transition);
+  }
+
+  .feature-card:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-5px);
+  }
+
+  .feature-card i {
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+    transition: var(--transition);
+  }
+
+  .feature-card:hover i {
+    color: white;
+  }
+
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }

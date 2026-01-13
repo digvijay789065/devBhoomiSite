@@ -61,7 +61,7 @@ const Navbar = ({
                 <Link to="#">Admissions</Link>
               </li>
               <li>
-                <Link to="#">Courses</Link>
+                <Link to="/pages/courses">Courses</Link>
               </li>
               <li>
                 <Link to="https://erp175.balajisolution.in/">Academics</Link>

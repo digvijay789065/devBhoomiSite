@@ -116,7 +116,11 @@ header {
 }
 
 header.scrolled {
-  background: linear-gradient(135deg, rgba(255, 210, 0, 0.15), rgba(254, 11, 0, 0.15));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 210, 0, 0.15),
+    rgba(254, 11, 0, 0.15)
+  );
   color: white;
   backdrop-filter: blur(5px);
   padding: 0.6rem 0;
@@ -266,7 +270,7 @@ header.scrolled {
 }
 
 .nav-links a.active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 10px;
@@ -446,7 +450,6 @@ header.scrolled {
   width: 85%;
   max-width: 1000px;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
-
 }
 
 .notice .container {
@@ -622,13 +625,13 @@ header.scrolled {
 }
 
 .campus-card::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 60%;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   z-index: 1;
 }
 
@@ -646,28 +649,69 @@ header.scrolled {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* Add your campus card background images here */
-#sports { background-image: url("../assets/campus_life/sports.webp"); }
-#alumni { background-image: url("../assets/campus_life/almuni.webp"); }
-#fresher { background-image: url("../assets/campus_life/fresher.webp"); }
-#industry_visit { background-image: url("../assets/campus_life/industrial_visit.webp"); }
-#tvaran { background-image: url("../assets/campus_life/tvaran.webp"); }
-#job { background-image: url("../assets/campus_life/job_fair.webp"); }
-#trip { background-image: url("../assets/campus_life/trip.webp"); }
-#girl_game { background-image: url("../assets/campus_life/girls_competition.webp"); }
-#play { background-image: url("../assets/campus_life/nukkad_play.webp"); }
-#star_night { background-image: url("../assets/campus_life/star_night.webp"); }
-#women_empower { background-image: url("../assets/campus_life/women_empowerment.webp"); }
-#farewell { background-image: url("../assets/campus_life/farewell_party.webp"); }
-#winners { background-image: url("../assets/campus_life/winners.webp"); }
-#guest_visit { background-image: url("../assets/campus_life/guests.webp"); }
-#jagrukta { background-image: url("../assets/campus_life/jagrukta_karyakram.webp"); }
-#seminar { background-image: url("../assets/campus_life/seminars.webp"); }
-#supportive_faculty { background-image: url("../assets/campus_life/supportive_faculty.webp"); }
-#yoga { background-image: url("../assets/campus_life/yoga.webp"); }
-#lovely_faculty { background-image: url("../assets/campus_life/lovely_faculty.webp"); }
-#parents_felicitation { background-image: url("../assets/campus_life/parents_felicitation_ceremoney.webp"); }
-#moot_court { background-image: url("../assets/campus_life/moot_court_competition.webp"); }
+#sports {
+  background-image: url("../assets/campus_life/sports.webp");
+}
+#alumni {
+  background-image: url("../assets/campus_life/almuni.webp");
+}
+#fresher {
+  background-image: url("../assets/campus_life/fresher.webp");
+}
+#industry_visit {
+  background-image: url("../assets/campus_life/industrial_visit.webp");
+}
+#tvaran {
+  background-image: url("../assets/campus_life/tvaran.webp");
+}
+#job {
+  background-image: url("../assets/campus_life/job_fair.webp");
+}
+#trip {
+  background-image: url("../assets/campus_life/trip.webp");
+}
+#girl_game {
+  background-image: url("../assets/campus_life/girls_competition.webp");
+}
+#play {
+  background-image: url("../assets/campus_life/nukkad_play.webp");
+}
+#star_night {
+  background-image: url("../assets/campus_life/star_night.webp");
+}
+#women_empower {
+  background-image: url("../assets/campus_life/women_empowerment.webp");
+}
+#farewell {
+  background-image: url("../assets/campus_life/farewell_party.webp");
+}
+#winners {
+  background-image: url("../assets/campus_life/winners.webp");
+}
+#guest_visit {
+  background-image: url("../assets/campus_life/guests.webp");
+}
+#jagrukta {
+  background-image: url("../assets/campus_life/jagrukta_karyakram.webp");
+}
+#seminar {
+  background-image: url("../assets/campus_life/seminars.webp");
+}
+#supportive_faculty {
+  background-image: url("../assets/campus_life/supportive_faculty.webp");
+}
+#yoga {
+  background-image: url("../assets/campus_life/yoga.webp");
+}
+#lovely_faculty {
+  background-image: url("../assets/campus_life/lovely_faculty.webp");
+}
+#parents_felicitation {
+  background-image: url("../assets/campus_life/parents_felicitation_ceremoney.webp");
+}
+#moot_court {
+  background-image: url("../assets/campus_life/moot_court_competition.webp");
+}
 
 /* Testimonials Section */
 .testimonials {
@@ -679,7 +723,6 @@ header.scrolled {
   width: 75%;
   max-width: 900px;
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
-
 }
 
 .testimonials .container {
@@ -856,12 +899,12 @@ footer input[type="email"] {
   .header-container {
     padding: 0 15px;
   }
-  
+
   .nav-links a {
     font-size: 0.8rem;
     padding: 6px 8px;
   }
-  
+
   .search-container {
     min-width: 180px;
   }
@@ -871,20 +914,20 @@ footer input[type="email"] {
   .nav-main-wrapper {
     justify-content: flex-start;
   }
-  
+
   .search-container {
     margin-left: auto;
     margin-right: 20px;
   }
-  
+
   .nav-container {
     display: none;
   }
-  
+
   .mobile-menu-toggle {
     display: block;
   }
-  
+
   .nav-container.active {
     display: block;
     position: absolute;
@@ -895,23 +938,23 @@ footer input[type="email"] {
     padding: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
-  
+
   .nav-container.active .nav-links {
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
     width: 100%;
   }
-  
+
   .nav-container.active .nav-links li {
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
-  
+
   .nav-container.active .nav-links li:last-child {
     border-bottom: none;
   }
-  
+
   .nav-container.active .nav-links a {
     padding: 12px 15px;
     width: 100%;
@@ -924,7 +967,7 @@ footer input[type="email"] {
     flex-direction: column;
     gap: 40px;
   }
-  
+
   .campus-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -935,98 +978,98 @@ footer input[type="email"] {
     padding: 0 10px;
     flex-wrap: wrap;
   }
-  
+
   .logo {
     font-size: 1.3rem;
   }
-  
+
   .logo img {
     height: 2rem;
     width: 2rem;
   }
-  
+
   .search-container {
     order: 3;
     width: 100%;
     max-width: none;
     margin: 10px 0 0 0;
   }
-  
+
   .nav-container.active {
     top: 100%;
   }
-  
+
   .hero {
     margin-top: 90px;
     height: 70vh;
     min-height: 500px;
   }
-  
+
   .hero-content {
     padding: 0 20px;
   }
-  
+
   .hero-btns {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .hero-btns .btn {
     width: 100%;
     max-width: 250px;
   }
-  
+
   .nav-container {
     display: none;
   }
-  
+
   .nav-links {
     flex-direction: column;
     gap: 0;
   }
-  
+
   .nav-links li {
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
-  
+
   .nav-links li:last-child {
     border-bottom: none;
   }
-  
+
   .nav-links a {
     padding: 15px 20px;
     font-size: 1.1rem;
     text-align: left;
     width: 100%;
   }
-    .nav-links a.active {
+  .nav-links a.active {
     border-bottom: none;
   }
-  
+
   .mobile-menu-toggle {
     display: block;
   }
-  
+
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .campus-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .programs-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .notice,
   .testimonials {
     width: 95%;
     margin: 2rem auto;
     border-radius: 1rem;
   }
-  
+
   .notice-slider,
   .testimonial-slider {
     min-height: 200px;
@@ -1037,56 +1080,56 @@ footer input[type="email"] {
   section {
     padding: 60px 0;
   }
-  
+
   .header-container {
     flex-wrap: nowrap;
   }
   .nav-links a.active {
     border-bottom: none;
   }
-  
+
   .logo {
     font-size: 1.2rem;
   }
-  
+
   .logo span {
     display: none;
   }
-  
+
   .logo img {
     height: 2rem;
     width: 2rem;
     margin-right: 0;
   }
-  
+
   .hero {
     height: 60vh;
     min-height: 400px;
     margin-top: 85px;
   }
-  
+
   .hero h1 {
     font-size: 1.8rem;
   }
-  
+
   .hero p {
     font-size: 1rem;
   }
-  
+
   .stats-container {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  
+
   .stat-card {
     padding: 25px 15px;
   }
-  
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
   .social-links {
     justify-content: center;
   }
@@ -1096,16 +1139,16 @@ footer input[type="email"] {
   .logo span {
     display: none;
   }
-  
+
   .hero {
     height: 50vh;
     min-height: 350px;
   }
-  
+
   .hero h1 {
     font-size: 1.6rem;
   }
-  
+
   .btn {
     padding: 10px 20px;
     font-size: 0.9rem;

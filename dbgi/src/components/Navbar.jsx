@@ -58,7 +58,7 @@ const Navbar = ({
                 <Link to="/pages/about-us">About Us</Link>
               </li>
               <li>
-                <Link to="#">Admissions</Link>
+                <Link to="/pages/admission">Admissions</Link>
               </li>
               <li>
                 <Link to="/pages/courses">Courses</Link>

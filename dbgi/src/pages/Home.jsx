@@ -26,24 +26,11 @@ const Home = () => {
 
   const noticeSlides = [
     {
-      title: "Admissions Open 2025",
-      description: "Apply before March 31st for the upcoming academic session",
-      link: "/admission_form/admission.html",
+      title: "Admissions Open 2026-27",
+      description: "New applications are open for the session 2026-27",
+      link: "/pages/admission",
       buttonText: "Apply Now",
-    },
-    {
-      title: "Campus Recruitment",
-      description:
-        "TCS campus drive on February 15th - Don't miss this opportunity",
-      link: "/placements/placements.html",
-      buttonText: "Register Now",
-    },
-    {
-      title: "Annual Fest Tvaran 2025",
-      description: "Join us for cultural extravaganza from November 10th",
-      link: "/events/tvaran.html",
-      buttonText: "View Details",
-    },
+    }
   ];
 
   const testimonials = [

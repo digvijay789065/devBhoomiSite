@@ -398,8 +398,8 @@ const Courses = () => {
                         <li key={index}>{feature}</li>
                       ))}
                     </ul>
-                    <Link to="/admission_form/admission.html" className="btn">
-                      Learn More
+                    <Link to="/pages/admission/" className="btn">
+                      Apply Now
                     </Link>
                   </div>
                 </div>

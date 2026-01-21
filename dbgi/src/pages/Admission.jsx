@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import "../styles/Admission.css";
 import { Link } from "react-router-dom";
+import ApplyNow from "../components/ApplyNow";
 
 const Admission = () => {
   const feeData = [
@@ -191,6 +192,13 @@ const Admission = () => {
         </div>
       </section>
 
+      <ApplyNow
+        heading="Ready to Join the DBGI Family?"
+        description="Take the first step toward your future at Dev Bhoomi Group of
+          Institutions. Applications for the next academic year are now open."
+        showButtons={false}
+        btnText="Apply Now"
+      />
       <Footer />
     </div>
   );

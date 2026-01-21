@@ -10,6 +10,7 @@ import IMG4 from "../assets/placements_images/4.webp";
 import PIC1 from "../assets/recruiters_images/1.webp";
 import PIC2 from "../assets/recruiters_images/2.webp";
 import PIC3 from "../assets/recruiters_images/3.webp";
+import ApplyNow from "../components/ApplyNow";
 
 const Placements = () => {
   return (
@@ -68,6 +69,12 @@ const Placements = () => {
     
       </section>
 
+      <ApplyNow
+        heading="Ready to Start Your Academic Journey?"
+        description="Take the first step toward your future at Dev Bhoomi Group of Institutions. Applications for the next academic year are now open."
+        btnText="Join DBGI"
+      />
+      
       <Footer />
     </div>
   );

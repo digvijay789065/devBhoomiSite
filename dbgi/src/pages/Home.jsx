@@ -316,7 +316,7 @@ const Home = () => {
         primaryBtnText="Explore Programs"
         secondaryBtnText="Apply Now"
         onPrimaryClick={() => scrollToSection("programs")}
-        secondaryBtnLink="/admission_form/admission.html"
+        secondaryBtnLink="/pages/admission"
       />
 
       {/* About Section */}
@@ -375,6 +375,7 @@ const Home = () => {
         noticeSlides={noticeSlides}
         currentNoticeSlide={currentNoticeSlide}
         setCurrentNoticeSlide={setCurrentNoticeSlide}
+        locationBtn="/pages/admission"
       />
 
       {/* Programs Section */}
@@ -419,7 +420,7 @@ const Home = () => {
                   <h3>{program.title}</h3>
                   <p>{program.description}</p>
                   <Link 
-                    to="#"
+                    to="/pages/courses"
                     className="btn"
                     rel="noopener noreferrer"
                   >

@@ -15,7 +15,7 @@ const ApplyNow = ({
             {description}
           </p>
           <Link
-            to="admission_form/admission.html"
+            to="/pages/admission"
             className="btn"
             rel="noopener noreferrer"
           >

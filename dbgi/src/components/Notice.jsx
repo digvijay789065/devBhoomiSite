@@ -1,10 +1,12 @@
 import React from "react";
 import '../styles/Home.css'
+import { Link } from "react-router-dom";
 
 const Notice = ({
   noticeSlides,
   currentNoticeSlide,
   setCurrentNoticeSlide,
+  locationBtn,
 }) => {
   return (
     <div>
@@ -25,9 +27,9 @@ const Notice = ({
                 <div className="notice-content">
                   <h3>{slide.title}</h3>
                   <p>{slide.description}</p>
-                  <a href={slide.link} className="btn">
+                  <Link to={locationBtn} className="btn">
                     {slide.buttonText}
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

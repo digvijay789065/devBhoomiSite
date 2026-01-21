@@ -990,7 +990,7 @@ footer input[type="email"] {
 
   .search-container {
     order: 3;
-    width: 100%;
+    width: 80%;
     max-width: none;
     margin: 10px 0 0 0;
   }
@@ -1000,7 +1000,7 @@ footer input[type="email"] {
   }
 
   .hero {
-    margin-top: 90px;
+    margin-top: 60px;
     height: 70vh;
     min-height: 500px;
   }
@@ -1105,7 +1105,7 @@ footer input[type="email"] {
   .hero {
     height: 60vh;
     min-height: 400px;
-    margin-top: 85px;
+    margin-top: 60px;
   }
 
   .hero h1 {

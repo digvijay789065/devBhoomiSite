@@ -1,4 +1,5 @@
-#DBGI COLLEGE WEBSITE REDESIGN
+# DBGI College Website Redesign
 
-##The Website is live, click the link below to open:
-[www.dbgi.in](https://dbgi.in)
+## The website is live. Click the link below to visit:
+
+🔗 [Visit DBGI Official Website](https://dbgi.in)

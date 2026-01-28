@@ -2,4 +2,4 @@
 
 ## The website is live. Click the link below to visit:
 
-🔗 [Visit DBGI Official Website](https://dbgi.in)
+🔗 [www.dbgi.in](https://dbgi.in)

@@ -217,7 +217,9 @@ const Navbar = ({
             <button
               ref={mobileMenuBtnRef}
               className="mobile-menu-toggle"
-              onClick={toggleMobileMenu}
+              onClick={
+                toggleMobileMenu
+              }
               aria-label="Toggle menu"
             >
               <i

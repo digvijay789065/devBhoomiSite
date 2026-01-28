@@ -11,6 +11,7 @@ import managingDirector from '../assets/images/managing_director.webp'
 import director from '../assets/images/director.webp'
 
 const AboutUs = () => {
+  
   return (
     <div>
       <Navbar />

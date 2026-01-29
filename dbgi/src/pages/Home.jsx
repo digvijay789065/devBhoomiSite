@@ -183,7 +183,6 @@ const Home = () => {
   }, []);
 
   const animateStats = () => {
-    console.log("animateStats called");
 
     // Get all stat elements
     const statElements = document.querySelectorAll(".stat-number");
@@ -193,12 +192,10 @@ const Home = () => {
       return;
     }
 
-    console.log(`Found ${statElements.length} stat elements`);
 
     // Get all final values
     const statsData = Array.from(statElements).map((stat) => {
       const finalValue = stat.getAttribute("data-final") || stat.textContent;
-      console.log(`Final value: ${finalValue}`);
 
       const numericValue = parseFloat(finalValue.replace(/[+,%L]/g, ""));
       const hasPlus = finalValue.includes("+");
@@ -218,8 +215,6 @@ const Home = () => {
 
     const duration = 2000; // 2 seconds
     const startTime = Date.now();
-
-    console.log(`Starting animation for ${statsData.length} counters`);
 
     const updateCounters = () => {
       const elapsed = Date.now() - startTime;
@@ -251,7 +246,6 @@ const Home = () => {
             stat.element.textContent = stat.finalValue;
           }
         });
-        console.log("Animation completed");
       }
     };
 

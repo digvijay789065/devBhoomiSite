@@ -12,6 +12,7 @@ import About from "../components/About";
 import ApplyNow from "../components/ApplyNow";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import CampusLife from "./CampusLifeOverlay";
 
 const Home = () => {
   const [currentNoticeSlide, setCurrentNoticeSlide] = useState(0);
@@ -429,22 +430,7 @@ const Home = () => {
 
       {/* Campus Life Section */}
       <section className="campus-life" id="campus">
-        <div className="container">
-          <div className="section-title">
-            <h2>Campus Life</h2>
-            <p>
-              Experience a vibrant campus community with diverse activities,
-              clubs, and resources that enrich your college experience.
-            </p>
-          </div>
-          <div className="campus-grid">
-            {campusCards.map((card, index) => (
-              <div className="campus-card" key={index} id={card.id}>
-                <h3>{card.title}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
+        <CampusLife />
       </section>
       
       {/* Testimonials Section */}

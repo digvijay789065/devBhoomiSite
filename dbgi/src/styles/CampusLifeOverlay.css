@@ -1,0 +1,409 @@
+/* Campus Life Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+  animation: modalFadeIn 0.3s ease;
+}
+
+.modal-content {
+  width: 80%;
+  max-width: 1200px;
+  max-height: 85vh;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+  animation: modalSlideUp 0.4s ease;
+  border: 3px solid var(--primary);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #ffd200, #fe0b00);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  box-shadow: 0 2px 10px rgba(255, 208, 0, 0.33);
+  font-weight: bold;
+}
+
+.modal-close-btn:hover {
+  background: #fe0b00;
+}
+
+/* Image Container */
+.modal-image-container {
+  position: relative;
+  height: 85vh;
+  /* background: rgba(0, 0, 0, 0.1); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.modal-image.loading {
+  opacity: 0;
+}
+
+.modal-image.loaded {
+  opacity: 1;
+}
+
+/* Loading Animation */
+.image-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #ffd200, #fe0b00);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  box-shadow: 0 2px 10px rgba(255, 208, 0, 0.33);
+  font-weight: bold;
+}
+
+.nav-btn:hover:not(:disabled) {
+  background: #fe0b00;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.image-counter {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 25px 30px;
+  background: white;
+  border-top: 3px solid var(--primary);
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.modal-description {
+  color: var(--dark);
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Thumbnail Navigation
+.thumbnail-container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) #f0f0f0;
+}
+
+.thumbnail-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.thumbnail-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.thumbnail-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ffd200, #fe0b00);
+  border-radius: 10px;
+}
+
+.thumbnail-btn {
+  flex: 0 0 auto;
+  width: 80px;
+  height: 60px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  transition: var(--transition);
+  position: relative;
+}
+
+.thumbnail-btn:hover:not(:disabled) {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 208, 0, 0.2);
+}
+
+.thumbnail-btn:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.thumbnail-btn.active {
+  border: 3px solid var(--primary);
+  box-shadow: 0 5px 15px rgba(255, 208, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+/* Animations */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Modal */
+@media (max-width: 992px) {
+  .modal-content {
+    width: 90%;
+  }
+  
+  .modal-image-container {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .modal-image-container {
+    height: 50vh;
+  }
+  
+  .nav-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .modal-description {
+    font-size: 0.95rem;
+  }
+  
+  .thumbnail-btn {
+    width: 70px;
+    height: 50px;
+  }
+  
+  .modal-close-btn {
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-image-container {
+    height: 40vh;
+  }
+  
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .thumbnail-btn {
+    width: 60px;
+    height: 45px;
+  }
+  
+  .modal-body {
+    padding: 15px;
+  }
+  
+  .modal-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Body scroll lock */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Update existing campus card styles for clickable effect */
+.campus-card {
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+}
+
+.campus-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.campus-card::after {
+  content: "Click to view more";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: var(--transition);
+  z-index: 2;
+}
+
+.campus-card:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accessibility */
+button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}

@@ -126,7 +126,10 @@ const Academics = () => {
           currentPage="academics"
         />
 
-      <Hero />
+      <Hero
+      heading= "Academics Page"
+      description= "Explore all academic resources and services like Student ERP Portal, Previous Year Questions Papers, Results, Curriculum, Academic Calender, Alumni registration and many more."
+      />
        
         {/* Academic Tabs */}
         <section className="academics-tabs">

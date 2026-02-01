@@ -1,45 +1,12 @@
-/* Academics Page Styles */
 .academics-container {
   width: 100%;
   overflow-x: hidden;
 }
 
-/* Hero Section */
-.academics-hero {
-  background: linear-gradient(rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0.6)),
-    url("../assets/images/campus_academics.webp");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 120px 0 80px;
-  text-align: center;
-  margin-top: 60px;
-}
-
-.academics-hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.academics-hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.academics-hero p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  opacity: 0.9;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
 /* Tabs Navigation */
 .academics-tabs {
-  background: white;
+  margin-top: 2rem;
   padding: 20px 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 60px;
   z-index: 999;
@@ -73,7 +40,7 @@
 .tab-btn.active {
   background: linear-gradient(135deg, #ffd200, #fe0b00);
   color: white;
-  border-color: transparent;
+  border: none;
   box-shadow: 0 4px 15px rgba(254, 11, 0, 0.3);
 }
 

@@ -9,6 +9,7 @@ import Placements from './pages/Placements'
 import Career from './pages/Career'
 import Umeed from './pages/Umeed'
 import Academics from './pages/Academics'
+import NotFoundPage from './pages/NotFoundPage'
 
 const App = () => {
   return (
@@ -23,6 +24,8 @@ const App = () => {
         <Route path='/pages/placements' element={<Placements />} />
         <Route path='/pages/career' element={<Career />} />
         <Route path='/pages/umeed' element={<Umeed />} />
+
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </div>
   )

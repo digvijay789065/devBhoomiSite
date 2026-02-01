@@ -5,7 +5,6 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import "../styles/Academics.css";
 
-
 const Academics = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -112,7 +111,6 @@ const Academics = () => {
   };
   return (
     <div>
-
       <div className="academics-container">
         {/* Navigation bar */}
         <Navbar
@@ -126,11 +124,11 @@ const Academics = () => {
           currentPage="academics"
         />
 
-      <Hero
-      heading= "Academics Page"
-      description= "Explore all academic resources and services like Student ERP Portal, Previous Year Questions Papers, Results, Curriculum, Academic Calender, Alumni registration and many more."
-      />
-       
+        <Hero
+          heading="Academics Page"
+          description="Explore all academic resources and services like Student ERP Portal, Previous Year Questions Papers, Results, Curriculum, Academic Calender, Alumni registration and many more."
+        />
+
         {/* Academic Tabs */}
         <section className="academics-tabs">
           <div className="container">
@@ -192,14 +190,13 @@ const Academics = () => {
                   </div>
                   <div className="academic-card-footer">
                     {section.external ? (
-                      <a
-                        href={section.link}
+                      <Link
+                        to={section.link}
                         className="btn"
-                        target="_blank"
                         rel="noopener noreferrer"
                       >
                         Visit Portal
-                      </a>
+                      </Link>
                     ) : (
                       <Link to={section.link} className="btn">
                         Access Now

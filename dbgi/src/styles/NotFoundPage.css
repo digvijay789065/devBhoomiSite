@@ -10,7 +10,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: overlay;
   background-image: url("../assets/images/campus_1.webp");
-  background-size: contain;
+  background-size: cover;
 }
 
 .notfound-content {

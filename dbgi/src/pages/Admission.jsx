@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
@@ -19,9 +19,52 @@ const Admission = () => {
     { id: 9, program: "B.COM", fee: "₹ 10,455/-" },
   ];
 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [headerScrolled, setHeaderScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHeaderScrolled(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      console.log("Searching academics for:", searchQuery);
+      // Implement search functionality
+    }
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = document.querySelector("header")?.offsetHeight || 80;
+      const targetPosition =
+        element.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+      setMobileMenuOpen(false);
+    }
+  };
+
   return (
     <div>
-      <Navbar />
+      <Navbar
+        headerScrolled={headerScrolled}
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        handleSearch={handleSearch}
+        scrollToSection={scrollToSection}
+        currentPage="admission"
+      />
       <Hero
         heading="Begin Your Journey With Us"
         description="Welcome to the Admissions section, designed to guide you through every step of joining our institution. Find detailed information on the admission procedure, online registration, fee structure, and the official prospectus—all in one place."

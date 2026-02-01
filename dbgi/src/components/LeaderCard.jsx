@@ -11,13 +11,13 @@ const LeaderCard = (
 ) => {
   return (
     <div>
-      <div class="leader-card">
-        <div class="leader-img">
+      <div className="leader-card">
+        <div className="leader-img">
           <img src={leaderImg} alt={leaderImgAlt} />
         </div>
-        <div class="leader-content">
+        <div className="leader-content">
           <h3>{leaderName}</h3>
-          <div class="position">{leaderPosition}</div>
+          <div className="position">{leaderPosition}</div>
           <p>{leaderQuote}</p>
         </div>
       </div>

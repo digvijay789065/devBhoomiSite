@@ -8,6 +8,7 @@ import ContactUs from './pages/ContactUs'
 import Placements from './pages/Placements'
 import Career from './pages/Career'
 import Umeed from './pages/Umeed'
+import Academics from './pages/Academics'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/pages/about-us' element={<About />} />
         <Route path='/pages/admission' element={<Admission />} />
         <Route path='/pages/courses' element={<Courses />} />
+        <Route path='/pages/academics' element={<Academics />} />
         <Route path='/pages/contact-us' element={<ContactUs />} />
         <Route path='/pages/placements' element={<Placements />} />
         <Route path='/pages/career' element={<Career />} />

@@ -155,14 +155,13 @@ const Navbar = ({
                   </Link>
                 </li>
                 <li>
-                  <a 
-                    href="https://erp175.balajisolution.in/"
-                    target="_blank"
+                  <Link 
+                    to="/pages/academics"
                     rel="noopener noreferrer"
                     onClick={() => mobileMenuOpen && setMobileMenuOpen(false)}
                   >
                     Academics
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Link 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
@@ -6,20 +6,60 @@ import "../styles/Umeed.css";
 import PDF1 from "../assets/documents/Umeed.pdf";
 import UmeedCard from "../components/UmeedCards";
 
-
 const Umeed = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [headerScrolled, setHeaderScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHeaderScrolled(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      console.log("Searching academics for:", searchQuery);
+      // Implement search functionality
+    }
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = document.querySelector("header")?.offsetHeight || 80;
+      const targetPosition =
+        element.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+      setMobileMenuOpen(false);
+    }
+  };
+
   return (
     <div>
-      <Navbar />
+      <Navbar
+        headerScrolled={headerScrolled}
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        handleSearch={handleSearch}
+        scrollToSection={scrollToSection}
+        currentPage="umeed"
+      />
       <Hero heading="Umeed" description="" />
 
       <section className="why-choose">
         <div className="container">
           <div className="section-title">
             <h2>Umeed</h2>
-            <p>
-              For students Mental Health compliance
-            </p>
+            <p>For students Mental Health compliance</p>
           </div>
           <div className="features-grid">
             <UmeedCard
@@ -40,7 +80,7 @@ const Umeed = () => {
               description="National Helpline Number"
               Phone="18008914416"
             />
-            
+
             <UmeedCard
               iconImage="fa-solid fa-circle-info"
               title="Internal Complaint Committee Head"

@@ -4,7 +4,8 @@ import "../styles/Courses.css";
 import ApplyNow from "../components/ApplyNow";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import BtechCS from "../assets/courses_images/courses/undergraduate/btech/computer_science.webp";
 import BtechCivil from "../assets/courses_images/courses/undergraduate/btech/civil.webp";
 import BtechElectrical from "../assets/courses_images/courses/undergraduate/btech/electrical.webp";
@@ -340,9 +341,52 @@ const Courses = () => {
 
   const { title, subtitle, courses } = getTabContent();
 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [searchQuery, setSearchQuery] = useState("");  
+    const [headerScrolled, setHeaderScrolled] = useState(false);
+  
+  useEffect(() => {
+      const handleScroll = () => {
+        setHeaderScrolled(window.scrollY > 100);
+      };
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+  
+    const handleSearch = (e) => {
+      e.preventDefault();
+      if (searchQuery.trim()) {
+        console.log("Searching academics for:", searchQuery);
+        // Implement search functionality
+      }
+    };
+  
+    const scrollToSection = (sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerHeight = document.querySelector("header")?.offsetHeight || 80;
+        const targetPosition =
+          element.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+        setMobileMenuOpen(false);
+      }
+    };
+
   return (
     <div>
-      <Navbar />
+      <Navbar
+        headerScrolled={headerScrolled}
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        handleSearch={handleSearch}
+        scrollToSection={scrollToSection}
+        currentPage="academics"
+      />
 
       <section className="courses-hero">
         <div className="courses-container">

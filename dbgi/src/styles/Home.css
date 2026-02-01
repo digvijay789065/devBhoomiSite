@@ -1136,6 +1136,11 @@ footer input[type="email"] {
 }
 
 @media (max-width: 400px) {
+
+  .hero{
+    margin-top: 80px;
+    
+  }
   .logo span {
     display: none;
   }

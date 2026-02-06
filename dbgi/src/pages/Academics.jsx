@@ -58,7 +58,7 @@ const Academics = () => {
       id: "web",
       title: "DBGI Web",
       description: "Access internal web portal and online resources",
-      link: "https://dbgi.ac.in",
+      link: "https://erp175.balajisolution.in/",
       external: true,
       category: "resources",
       icon: "🌐",

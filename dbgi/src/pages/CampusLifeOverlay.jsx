@@ -2,27 +2,113 @@ import { useState, useEffect } from 'react';
 import '../styles/CampusLifeOverlay.css';
 
 // Import local images
-import sports from '../assets/campus_life/sports.webp';
-import alumni from '../assets/campus_life/almuni.webp';
-import fresher from '../assets/campus_life/fresher.webp';
-import industry_visit from '../assets/campus_life/industrial_visit.webp';
-import tvaran from '../assets/campus_life/tvaran.webp';
-import job from '../assets/campus_life/job_fair.webp';
-import trip from '../assets/campus_life/trip.webp';
-import girl_game from '../assets/campus_life/girls_competition.webp';
-import play from '../assets/campus_life/nukkad_play.webp';
-import star_night from '../assets/campus_life/star_night.webp';
-import women_empower from '../assets/campus_life/women_empowerment.webp';
-import farewell from '../assets/campus_life/farewell_party.webp';
-import winners from '../assets/campus_life/winners.webp';
+import sports1 from '../assets/campus_life/sports.webp';
+import sports2 from '../assets/campus_life/sports-2.webp';
+import sports3 from '../assets/campus_life/sports-3.webp';
+import sports4 from '../assets/campus_life/sports-4.webp';
+import sports5 from '../assets/campus_life/sports-5.webp';
+
+import alumni1 from '../assets/campus_life/almuni.webp';
+import alumni2 from '../assets/campus_life/almuni-2.webp';
+import alumni3 from '../assets/campus_life/almuni-3.webp';
+import alumni4 from '../assets/campus_life/almuni-4.webp';
+import alumni5 from '../assets/campus_life/almuni-5.webp';
+
+import fresher1 from '../assets/campus_life/fresher.webp';
+import fresher2 from '../assets/campus_life/fresher-2.webp';
+import fresher3 from '../assets/campus_life/fresher-3.webp';
+import fresher4 from '../assets/campus_life/fresher-4.webp';
+import fresher5 from '../assets/campus_life/fresher-5.webp';
+import fresher6 from '../assets/campus_life/fresher-6.webp';
+import fresher7 from '../assets/campus_life/fresher-7.webp';
+
+import industry_visit1 from '../assets/campus_life/industrial_visit.webp';
+import industry_visit2 from '../assets/campus_life/industrial_visit-2.webp';
+import industry_visit3 from '../assets/campus_life/industrial_visit-3.webp';
+
+import tvaran1 from '../assets/campus_life/tvaran.webp';
+import tvaran2 from '../assets/campus_life/tvaran-2.webp';
+import tvaran3 from '../assets/campus_life/tvaran-3.webp';
+import tvaran4 from '../assets/campus_life/tvaran-4.webp';
+import tvaran5 from '../assets/campus_life/tvaran-5.webp';
+import tvaran6 from '../assets/campus_life/tvaran-6.webp';
+import tvaran7 from '../assets/campus_life/tvaran-7.webp';
+import tvaran8 from '../assets/campus_life/tvaran-8.webp';
+import tvaran9 from '../assets/campus_life/tvaran-9.webp';
+import tvaran10 from '../assets/campus_life/tvaran-10.webp';
+
+import job1 from '../assets/campus_life/job_fair.webp';
+import job2 from '../assets/campus_life/job_fair-2.webp';
+import job3 from '../assets/campus_life/job_fair-3.webp';
+
+import trip2 from '../assets/campus_life/trip-2.webp';
+import trip3 from '../assets/campus_life/trip-3.webp';
+import trip4 from '../assets/campus_life/trip-4.webp';
+
+import girl_game1 from '../assets/campus_life/girls_competition.webp';
+import girl_game2 from '../assets/campus_life/girls_competition-2.webp';
+import girl_game3 from '../assets/campus_life/girls_competition-3.webp';
+import girl_game4 from '../assets/campus_life/girls_competition-4.webp';
+import girl_game5 from '../assets/campus_life/girls_competition-5.webp';
+
+import play1 from '../assets/campus_life/nukkad_play.webp';
+import play2 from '../assets/campus_life/nukkad_play-2.webp';
+import play3 from '../assets/campus_life/nukkad_play-3.webp';
+import play4 from '../assets/campus_life/nukkad_play-4.webp';
+import play5 from '../assets/campus_life/nukkad_play-5.webp';
+
+import star_night1 from '../assets/campus_life/star_night.webp';
+import star_night2 from '../assets/campus_life/star_night-2.webp';
+import star_night3 from '../assets/campus_life/star_night-3.webp';
+import star_night4 from '../assets/campus_life/star_night-4.webp';
+import star_night5 from '../assets/campus_life/star_night-5.webp';
+
+import women_empower1 from '../assets/campus_life/women_empowerment.webp';
+import women_empower2 from '../assets/campus_life/women_empowerment-2.webp';
+import women_empower3 from '../assets/campus_life/women_empowerment-3.webp';
+import women_empower4 from '../assets/campus_life/women_empowerment-4.webp';
+import women_empower5 from '../assets/campus_life/women_empowerment-5.webp';
+
+import farewell1 from '../assets/campus_life/farewell_party.webp';
+import farewell2 from '../assets/campus_life/farewell_party-2.webp';
+import farewell3 from '../assets/campus_life/farewell_party-3.webp';
+
+import winners1 from '../assets/campus_life/winners.webp';
+import winners2 from '../assets/campus_life/winners-2.webp';
+import winners3 from '../assets/campus_life/winners-3.webp';
+import winners4 from '../assets/campus_life/winners-4.webp';
+import winners5 from '../assets/campus_life/winners-5.webp';
+
 import guest_visit from '../assets/campus_life/guests.webp';
-import jagrukta from '../assets/campus_life/jagrukta_karyakram.webp';
+
+import jagrukta1 from '../assets/campus_life/jagrukta_karyakram.webp';
+import jagrukta2 from '../assets/campus_life/jagrukta_karyakram-2.webp';
+import jagrukta3 from '../assets/campus_life/jagrukta_karyakram-3.webp';
+import jagrukta4 from '../assets/campus_life/jagrukta_karyakram-4.webp';
+import jagrukta5 from '../assets/campus_life/jagrukta_karyakram-5.webp';
+
 import seminar from '../assets/campus_life/seminars.webp';
 import supportive_faculty from '../assets/campus_life/supportive_faculty.webp';
-import yoga from '../assets/campus_life/yoga.webp';
-import lovely_faculty from '../assets/campus_life/lovely_faculty.webp';
+
+import yoga1 from '../assets/campus_life/yoga.webp';
+import yoga2 from '../assets/campus_life/yoga-2.webp';
+import yoga3 from '../assets/campus_life/yoga-3.webp';
+import yoga4 from '../assets/campus_life/yoga-4.webp';
+import yoga5 from '../assets/campus_life/yoga-5.webp';
+
+import lovely_faculty1 from '../assets/campus_life/lovely_faculty.webp';
+import lovely_faculty2 from '../assets/campus_life/lovely_faculty-2.webp';
+import lovely_faculty3 from '../assets/campus_life/lovely_faculty-3.webp';
+import lovely_faculty4 from '../assets/campus_life/lovely_faculty-4.webp';
+import lovely_faculty5 from '../assets/campus_life/lovely_faculty-5.webp';
+
 import parents_felicitation from '../assets/campus_life/parents_felicitation_ceremoney.webp';
-import moot_court from '../assets/campus_life/moot_court_competition.webp';
+
+import moot_court1 from '../assets/campus_life/moot_court_competition.webp';
+import moot_court2 from '../assets/campus_life/moot_court_competition-2.webp';
+import moot_court3 from '../assets/campus_life/moot_court_competition-3.webp';
+import moot_court4 from '../assets/campus_life/moot_court_competition-4.webp';
+import moot_court5 from '../assets/campus_life/moot_court_competition-5.webp';
 
 const CampusLife = () => {
   // Modal state
@@ -36,7 +122,7 @@ const CampusLife = () => {
     {
       id: 'sports',
       title: 'Sports & Athletics',
-      images: [sports, sports, sports], // You can add more images
+      images: [sports1, sports2, sports3, sports4, sports5], 
       description: 'Annual sports meet with various competitions including athletics, football, basketball, and more. Our students excel in inter-college tournaments.',
       altTexts: [
         'Sports competition at campus',
@@ -47,7 +133,7 @@ const CampusLife = () => {
     {
       id: 'alumni',
       title: 'Alumni Network',
-      images: [alumni, alumni, alumni],
+      images: [alumni1, alumni2, alumni3, alumni4, alumni5],
       description: 'Active alumni network with regular meetups, mentorship programs, and career guidance sessions for current students.',
       altTexts: [
         'Alumni meet annual gathering',
@@ -58,7 +144,7 @@ const CampusLife = () => {
     {
       id: 'fresher',
       title: 'Freshers Welcome',
-      images: [fresher, fresher, fresher],
+      images: [fresher1, fresher2, fresher3, fresher4, fresher5, fresher6, fresher7],
       description: 'Grand welcome ceremony for new students with cultural performances, ice-breaking sessions, and campus orientation.',
       altTexts: [
         'Freshers welcome ceremony',
@@ -69,7 +155,7 @@ const CampusLife = () => {
     {
       id: 'industry_visit',
       title: 'Industrial Visits',
-      images: [industry_visit, industry_visit, industry_visit],
+      images: [industry_visit1, industry_visit2, industry_visit3],
       description: 'Regular industrial visits to leading companies for practical exposure and understanding of real-world applications.',
       altTexts: [
         'Students on industrial visit',
@@ -80,7 +166,7 @@ const CampusLife = () => {
     {
       id: 'tvaran',
       title: 'Tvaran Events',
-      images: [tvaran, tvaran, tvaran],
+      images: [tvaran1, tvaran2, tvaran3, tvaran4, tvaran5, tvaran6, tvaran7, tvaran8, tvaran9, tvaran10],
       description: 'Annual cultural fest featuring music, dance, drama, art exhibitions, and various competitions.',
       altTexts: [
         'Cultural fest performance',
@@ -91,7 +177,7 @@ const CampusLife = () => {
     {
       id: 'job',
       title: 'Job Fair',
-      images: [job, job, job],
+      images: [job1, job2, job3],
       description: 'Campus placement drive with top recruiters from various industries offering excellent career opportunities.',
       altTexts: [
         'Campus placement drive',
@@ -102,7 +188,7 @@ const CampusLife = () => {
     {
       id: 'trip',
       title: 'Educational Trips',
-      images: [trip, trip, trip],
+      images: [trip2, trip3, trip4],
       description: 'Educational and recreational trips to historical sites, tech parks, and natural wonders for holistic learning.',
       altTexts: [
         'Educational trip group photo',
@@ -113,7 +199,7 @@ const CampusLife = () => {
     {
       id: 'girl_game',
       title: 'Girls Competition',
-      images: [girl_game, girl_game, girl_game],
+      images: [girl_game1, girl_game2, girl_game3, girl_game4, girl_game5],
       description: 'Special competitions and events celebrating women empowerment and encouraging female participation in sports.',
       altTexts: [
         'Girls sports competition',
@@ -124,7 +210,7 @@ const CampusLife = () => {
     {
       id: 'play',
       title: 'Nukkad Natak',
-      images: [play, play, play],
+      images: [play1, play2, play3, play4, play5],
       description: 'Street plays addressing social issues, performed by students to create awareness in the community.',
       altTexts: [
         'Street play performance',
@@ -135,7 +221,7 @@ const CampusLife = () => {
     {
       id: 'star_night',
       title: 'Star Night',
-      images: [star_night, star_night, star_night],
+      images: [star_night1, star_night2, star_night3, star_night4, star_night5],
       description: 'Musical night featuring popular artists, bands, and student performances under the stars.',
       altTexts: [
         'Star night concert',
@@ -146,7 +232,7 @@ const CampusLife = () => {
     {
       id: 'women_empower',
       title: 'Women Empowerment',
-      images: [women_empower, women_empower, women_empower],
+      images: [women_empower1, women_empower2, women_empower3, women_empower4, women_empower5],
       description: 'Programs and workshops focused on women empowerment, self-defense, and career development.',
       altTexts: [
         'Women empowerment workshop',
@@ -157,7 +243,7 @@ const CampusLife = () => {
     {
       id: 'farewell',
       title: 'Farewell Party',
-      images: [farewell, farewell, farewell],
+      images: [farewell1, farewell2, farewell3],
       description: 'Emotional farewell ceremony for graduating students with awards, speeches, and cultural performances.',
       altTexts: [
         'Farewell ceremony',
@@ -168,7 +254,7 @@ const CampusLife = () => {
     {
       id: 'winners',
       title: 'Achievers',
-      images: [winners, winners, winners],
+      images: [winners1, winners2, winners3, winners4, winners5],
       description: 'Celebrating student achievements in academics, sports, and extracurricular activities.',
       altTexts: [
         'Award ceremony',
@@ -190,7 +276,7 @@ const CampusLife = () => {
     {
       id: 'jagrukta',
       title: 'Awareness Programs',
-      images: [jagrukta, jagrukta, jagrukta],
+      images: [jagrukta1, jagrukta2, jagrukta3, jagrukta4, jagrukta5],
       description: 'Social awareness campaigns on important issues like environment, health, and digital literacy.',
       altTexts: [
         'Awareness program',
@@ -223,7 +309,7 @@ const CampusLife = () => {
     {
       id: 'yoga',
       title: 'Yoga & Wellness',
-      images: [yoga, yoga, yoga],
+      images: [yoga1, yoga2, yoga3, yoga4, yoga5],
       description: 'Regular yoga sessions, meditation programs, and wellness workshops for students and staff.',
       altTexts: [
         'Yoga session',
@@ -234,7 +320,7 @@ const CampusLife = () => {
     {
       id: 'lovely_faculty',
       title: 'Faculty Interaction',
-      images: [lovely_faculty, lovely_faculty, lovely_faculty],
+      images: [lovely_faculty1, lovely_faculty2, lovely_faculty3, lovely_faculty4, lovely_faculty5],
       description: 'Friendly and approachable faculty creating a positive learning environment.',
       altTexts: [
         'Faculty interaction',
@@ -256,7 +342,7 @@ const CampusLife = () => {
     {
       id: 'moot_court',
       title: 'Moot Court',
-      images: [moot_court, moot_court, moot_court],
+      images: [moot_court1, moot_court2, moot_court3, moot_court4, moot_court5],
       description: 'Mock court competitions for law students to develop advocacy and legal reasoning skills.',
       altTexts: [
         'Moot court competition',

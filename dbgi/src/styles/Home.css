@@ -300,7 +300,7 @@ header.scrolled {
 .hero {
   height: 100vh;
   min-height: 600px;
-  background: linear-gradient(rgba(0, 0, 255, 0.75), rgba(0, 0, 255, 0.20)),
+  background: linear-gradient(rgba(0, 0, 255, 0.75), rgba(0, 0, 255, 0.30)),
     url("../assets/images/campus_2.webp");
   background-size: cover;
   background-position: center;
@@ -668,7 +668,7 @@ header.scrolled {
   background-image: url("../assets/campus_life/job_fair.webp");
 }
 #trip {
-  background-image: url("../assets/campus_life/trip.webp");
+  background-image: url("../assets/campus_life/trip-2.webp");
 }
 #girl_game {
   background-image: url("../assets/campus_life/girls_competition.webp");

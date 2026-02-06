@@ -25,7 +25,6 @@ const NotFoundPage = () => {
   return (
     <div>
       <div className="notfound-container">
-        
         {/* 404 Hero Section */}
         <section className="notfound-hero">
           <div className="container">
@@ -51,20 +50,17 @@ const NotFoundPage = () => {
                 name changed, or is temporarily unavailable.
               </p>
 
-            
-
               {/* Main CTA Button */}
               <div className="notfound-cta">
                 <Link to="/" className="btn btn-large">
                   BACK TO HOME
                 </Link>
               </div>
-
-              
             </div>
           </div>
         </section>
-</div>
+      </div>
+      <Footer />
     </div>
   );
 };

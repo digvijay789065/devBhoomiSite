@@ -25,6 +25,7 @@ import fresher7 from '../assets/campus_life/fresher-7.webp';
 import industry_visit1 from '../assets/campus_life/industrial_visit.webp';
 import industry_visit2 from '../assets/campus_life/industrial_visit-2.webp';
 import industry_visit3 from '../assets/campus_life/industrial_visit-3.webp';
+import industry_visit4 from '../assets/campus_life/industrial_visit-4.webp';
 
 import tvaran1 from '../assets/campus_life/tvaran.webp';
 import tvaran2 from '../assets/campus_life/tvaran-2.webp';
@@ -40,6 +41,8 @@ import tvaran10 from '../assets/campus_life/tvaran-10.webp';
 import job1 from '../assets/campus_life/job_fair.webp';
 import job2 from '../assets/campus_life/job_fair-2.webp';
 import job3 from '../assets/campus_life/job_fair-3.webp';
+import job4 from '../assets/campus_life/job_fair-4.webp';
+import job5 from '../assets/campus_life/job_fair-5.webp';
 
 import trip2 from '../assets/campus_life/trip-2.webp';
 import trip3 from '../assets/campus_life/trip-3.webp';
@@ -79,7 +82,8 @@ import winners3 from '../assets/campus_life/winners-3.webp';
 import winners4 from '../assets/campus_life/winners-4.webp';
 import winners5 from '../assets/campus_life/winners-5.webp';
 
-import guest_visit from '../assets/campus_life/guests.webp';
+import guest_visit1 from '../assets/campus_life/guests.webp';
+import guest_visit2 from '../assets/campus_life/guests-2.webp';
 
 import jagrukta1 from '../assets/campus_life/jagrukta_karyakram.webp';
 import jagrukta2 from '../assets/campus_life/jagrukta_karyakram-2.webp';
@@ -87,8 +91,13 @@ import jagrukta3 from '../assets/campus_life/jagrukta_karyakram-3.webp';
 import jagrukta4 from '../assets/campus_life/jagrukta_karyakram-4.webp';
 import jagrukta5 from '../assets/campus_life/jagrukta_karyakram-5.webp';
 
-import seminar from '../assets/campus_life/seminars.webp';
-import supportive_faculty from '../assets/campus_life/supportive_faculty.webp';
+import seminar1 from '../assets/campus_life/seminars.webp';
+import seminar2 from '../assets/campus_life/seminars-2.webp';
+import seminar3 from '../assets/campus_life/seminars-3.webp';
+
+import supportive_faculty1 from '../assets/campus_life/supportive_faculty.webp';
+import supportive_faculty2 from '../assets/campus_life/supportive_faculty-2.webp';
+import supportive_faculty3 from '../assets/campus_life/supportive_faculty-3.webp';
 
 import yoga1 from '../assets/campus_life/yoga.webp';
 import yoga2 from '../assets/campus_life/yoga-2.webp';
@@ -102,7 +111,10 @@ import lovely_faculty3 from '../assets/campus_life/lovely_faculty-3.webp';
 import lovely_faculty4 from '../assets/campus_life/lovely_faculty-4.webp';
 import lovely_faculty5 from '../assets/campus_life/lovely_faculty-5.webp';
 
-import parents_felicitation from '../assets/campus_life/parents_felicitation_ceremoney.webp';
+import parents_felicitation1 from '../assets/campus_life/parents_felicitation_ceremoney.webp';
+import parents_felicitation2 from '../assets/campus_life/parents_felicitation_ceremoney-2.webp';
+import parents_felicitation3 from '../assets/campus_life/parents_felicitation_ceremoney-3.webp';
+import parents_felicitation4 from '../assets/campus_life/parents_felicitation_ceremoney-4.webp';
 
 import moot_court1 from '../assets/campus_life/moot_court_competition.webp';
 import moot_court2 from '../assets/campus_life/moot_court_competition-2.webp';
@@ -155,7 +167,7 @@ const CampusLife = () => {
     {
       id: 'industry_visit',
       title: 'Industrial Visits',
-      images: [industry_visit1, industry_visit2, industry_visit3],
+      images: [industry_visit1, industry_visit2, industry_visit3, industry_visit4],
       description: 'Regular industrial visits to leading companies for practical exposure and understanding of real-world applications.',
       altTexts: [
         'Students on industrial visit',
@@ -177,7 +189,7 @@ const CampusLife = () => {
     {
       id: 'job',
       title: 'Job Fair',
-      images: [job1, job2, job3],
+      images: [job1, job2, job3, job4, job5],
       description: 'Campus placement drive with top recruiters from various industries offering excellent career opportunities.',
       altTexts: [
         'Campus placement drive',
@@ -265,7 +277,7 @@ const CampusLife = () => {
     {
       id: 'guest_visit',
       title: 'Guest Lectures',
-      images: [guest_visit, guest_visit, guest_visit],
+      images: [guest_visit1, guest_visit2],
       description: 'Regular sessions with industry experts, entrepreneurs, and alumni for knowledge sharing.',
       altTexts: [
         'Guest lecture session',
@@ -287,7 +299,7 @@ const CampusLife = () => {
     {
       id: 'seminar',
       title: 'Seminars & Workshops',
-      images: [seminar, seminar, seminar],
+      images: [seminar1, seminar2, seminar3],
       description: 'Regular seminars, workshops, and training sessions for skill development and knowledge enhancement.',
       altTexts: [
         'Seminar in progress',
@@ -298,7 +310,7 @@ const CampusLife = () => {
     {
       id: 'supportive_faculty',
       title: 'Supportive Faculty',
-      images: [supportive_faculty, supportive_faculty, supportive_faculty],
+      images: [supportive_faculty1, supportive_faculty2, supportive_faculty3],
       description: 'Dedicated faculty members providing mentorship, guidance, and support to students.',
       altTexts: [
         'Faculty guidance session',
@@ -331,7 +343,7 @@ const CampusLife = () => {
     {
       id: 'parents_felicitation',
       title: 'Parents Day',
-      images: [parents_felicitation, parents_felicitation, parents_felicitation],
+      images: [parents_felicitation1, parents_felicitation2, parents_felicitation3, parents_felicitation4],
       description: 'Annual parents felicitation ceremony recognizing student achievements and parent involvement.',
       altTexts: [
         'Parents day ceremony',

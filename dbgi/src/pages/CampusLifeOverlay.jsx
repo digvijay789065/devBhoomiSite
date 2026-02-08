@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../styles/CampusLifeOverlay.css';
 
-// Import local images
 import sports1 from '../assets/campus_life/sports.webp';
 import sports2 from '../assets/campus_life/sports-2.webp';
 import sports3 from '../assets/campus_life/sports-3.webp';
@@ -129,11 +128,10 @@ const CampusLife = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   
-  // Campus data with multiple images for each card
   const campusCards = [
     {
       id: 'sports',
-      title: 'Sports & Athletics',
+      title: 'Sports Meet',
       images: [sports1, sports2, sports3, sports4, sports5], 
       description: 'Annual sports meet with various competitions including athletics, football, basketball, and more. Our students excel in inter-college tournaments.',
       altTexts: [
@@ -144,7 +142,7 @@ const CampusLife = () => {
     },
     {
       id: 'alumni',
-      title: 'Alumni Network',
+      title: 'Alumni Meetups',
       images: [alumni1, alumni2, alumni3, alumni4, alumni5],
       description: 'Active alumni network with regular meetups, mentorship programs, and career guidance sessions for current students.',
       altTexts: [
@@ -155,7 +153,7 @@ const CampusLife = () => {
     },
     {
       id: 'fresher',
-      title: 'Freshers Welcome',
+      title: 'Freshers Party',
       images: [fresher1, fresher2, fresher3, fresher4, fresher5, fresher6, fresher7],
       description: 'Grand welcome ceremony for new students with cultural performances, ice-breaking sessions, and campus orientation.',
       altTexts: [
@@ -331,7 +329,7 @@ const CampusLife = () => {
     },
     {
       id: 'lovely_faculty',
-      title: 'Faculty Interaction',
+      title: 'Lovely Faculty',
       images: [lovely_faculty1, lovely_faculty2, lovely_faculty3, lovely_faculty4, lovely_faculty5],
       description: 'Friendly and approachable faculty creating a positive learning environment.',
       altTexts: [
@@ -342,7 +340,7 @@ const CampusLife = () => {
     },
     {
       id: 'parents_felicitation',
-      title: 'Parents Day',
+      title: 'Parents Felicitation',
       images: [parents_felicitation1, parents_felicitation2, parents_felicitation3, parents_felicitation4],
       description: 'Annual parents felicitation ceremony recognizing student achievements and parent involvement.',
       altTexts: [

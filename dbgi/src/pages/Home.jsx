@@ -35,7 +35,7 @@ const Home = () => {
     {
       title: "H. P. Bansal Memorial Sports Meet 2026",
       description: "25 & 26 February 2026 - Give your names to your respective HODs",
-      link: "tel:+91 95687754222",
+      link: "tel:+91 9568775222",
       buttonText: "Contact now",
     }
   ];

@@ -6,7 +6,6 @@ const Notice = ({
   noticeSlides,
   currentNoticeSlide,
   setCurrentNoticeSlide,
-  locationBtn,
 }) => {
   return (
     <div>
@@ -27,7 +26,7 @@ const Notice = ({
                 <div className="notice-content">
                   <h3>{slide.title}</h3>
                   <p>{slide.description}</p>
-                  <Link to={locationBtn} className="btn">
+                  <Link to={slide.link} className="btn">
                     {slide.buttonText}
                   </Link>
                 </div>

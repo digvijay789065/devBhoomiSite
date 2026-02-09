@@ -31,6 +31,12 @@ const Home = () => {
       description: "New applications are open for the session 2026-27",
       link: "/pages/admission",
       buttonText: "Apply Now",
+    },
+    {
+      title: "H. P. Bansal Memorial Sports Meet 2026",
+      description: "25 & 26 February 2026 - Give your names to your respective HODs",
+      link: "tel:+91 95687754222",
+      buttonText: "Contact now",
     }
   ];
 
@@ -370,7 +376,7 @@ const Home = () => {
         noticeSlides={noticeSlides}
         currentNoticeSlide={currentNoticeSlide}
         setCurrentNoticeSlide={setCurrentNoticeSlide}
-        locationBtn="/pages/admission"
+        
       />
 
       {/* Programs Section */}

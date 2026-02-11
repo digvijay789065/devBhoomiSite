@@ -51,21 +51,33 @@ const Footer = ({
           <div className="footer-column">
             <h3>Quick Links</h3>
             {[
-              "Home",
-              "About Us",
-              "Academic Programs",
-              "Admissions",
-              "Campus Life",
+              {
+                pathName: "Courses",
+                path: "/pages/courses",
+              },
+              {
+                pathName: "About Us",
+                path: "/pages/about-us",
+              },
+              {
+                pathName: "Academic Programs",
+                path: "/pages/academics",
+              },
+              {
+                pathName: "Admissions",
+                path: "/pages/admission",
+              },
+              {
+                pathName: "Campus Life",
+                path: "/",
+              }
+              
             ].map((link, index) => (
               <Link
                 key={index}
-                to={`#${link.toLowerCase().replace(" ", "-")}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(link.toLowerCase().replace(" ", "-"));
-                }}
+                to={link.path}                
               >
-                {link}
+                {link.pathName}
               </Link>
             ))}
           </div>
@@ -78,7 +90,7 @@ const Footer = ({
               "Alumni Network",
               "Campus Map",
             ].map((resource, index) => (
-              <Link key={index} href="#">
+              <Link key={index} to="#">
                 {resource}
               </Link>
             ))}

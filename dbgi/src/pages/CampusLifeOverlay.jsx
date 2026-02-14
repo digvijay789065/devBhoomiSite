@@ -127,6 +127,8 @@ const CampusLife = () => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
+
   
   const campusCards = [
     {
@@ -368,6 +370,7 @@ const CampusLife = () => {
     setCurrentImageIndex(0);
     setIsModalOpen(true);
     setIsLoading(true);
+    setProgress(0); 
     document.body.classList.add('modal-open');
   };
 
@@ -380,6 +383,9 @@ const CampusLife = () => {
   // Navigate to next image
   const nextImage = () => {
     const currentCard = campusCards[currentCardIndex];
+    setIsLoading(true);
+    setProgress(0);
+
     setCurrentImageIndex((prev) => 
       prev === currentCard.images.length - 1 ? 0 : prev + 1
     );
@@ -388,15 +394,21 @@ const CampusLife = () => {
   // Navigate to previous image
   const prevImage = () => {
     const currentCard = campusCards[currentCardIndex];
+    setIsLoading(true);
+    setProgress(0);
+
     setCurrentImageIndex((prev) => 
       prev === 0 ? currentCard.images.length - 1 : prev - 1
     );
   };
 
-  // Handle image load
-  const handleImageLoad = () => {
+  // Handle image load - chnaged today, just do undo 
+ const handleImageLoad = () => {
+  setProgress(100);
+  setTimeout(() => {
     setIsLoading(false);
-  };
+  }, 200);
+};
 
   // Handle keyboard navigation
   useEffect(() => {
@@ -421,6 +433,22 @@ const CampusLife = () => {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isModalOpen, currentCardIndex]);
+
+
+    useEffect(() => {
+      let interval;
+
+      if (isLoading) {
+        interval = setInterval(() => {
+          setProgress((prev) => {
+            if (prev >= 90) return prev;
+            return prev + 5;
+          });
+      }, 150);
+    }
+
+      return () => clearInterval(interval);
+    }, [isLoading]);
 
   // Handle overlay click
   const handleOverlayClick = (e) => {
@@ -462,20 +490,17 @@ const CampusLife = () => {
           onClick={handleOverlayClick}
         >
           <div className="modal-content">
-            {/* Close button */}
-            {/* <button
-              onClick={closeModal}
-              className="modal-close-btn"
-              aria-label="Close modal"
-            >
-              ×
-            </button> */}
-
             {/* Image container */}
             <div className="modal-image-container">
               {isLoading && (
                 <div className="image-loading">
-                  <div className="loading-spinner"></div>
+                  <div className="spinner">
+                  <div
+                    className="loading-bar"
+                    style={{ width: `${progress}%` }}
+                  ></div>
+                </div>
+
                 </div>
               )}
               <img
@@ -511,40 +536,7 @@ const CampusLife = () => {
               <div className="image-counter">
                 {currentImageIndex + 1} / {campusCards[currentCardIndex].images.length}
               </div>
-            </div>
-
-            {/* Content section */}
-            {/* <div className="modal-body"> */}
-              {/* <h2 className="modal-title">
-                {campusCards[currentCardIndex].title}
-              </h2>
-              <p className="modal-description">
-                {campusCards[currentCardIndex].description}
-              </p> */}
-              
-              {/* Thumbnail navigation */}
-              {/* <div className="thumbnail-container">
-                {campusCards[currentCardIndex].images.map((img, index) => (
-                  <button
-                    key={index}
-                    onClick={() => {
-                      setCurrentImageIndex(index);
-                      setIsLoading(true);
-                    }}
-                    className={`thumbnail-btn ${currentImageIndex === index ? 'active' : ''}`}
-                    aria-label={`View image ${index + 1}`}
-                    disabled={isLoading && currentImageIndex === index}
-                  >
-                    <img
-                      src={img}
-                      alt={`Thumbnail ${index + 1}`}
-                      className="thumbnail-img"
-                      loading="lazy"
-                    />
-                  </button>
-                ))}
-              </div> */}
-            {/* </div> */}
+            </div>           
           </div>
         </div>
       )}

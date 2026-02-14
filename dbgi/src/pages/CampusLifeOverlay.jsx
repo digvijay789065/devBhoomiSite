@@ -471,7 +471,7 @@ const CampusLife = () => {
           <div className="campus-grid">
             {campusCards.map((card, index) => (
               <div 
-                className={`campus-card ${card.id}`}
+                className={`campus-card scroll-animation ${card.id}`}
                 key={index} 
                 id={card.id}
                 onClick={() => openModal(index)}

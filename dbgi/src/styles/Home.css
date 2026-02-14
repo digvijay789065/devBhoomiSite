@@ -300,7 +300,8 @@ header.scrolled {
 .hero {
   height: 100vh;
   min-height: 600px;
-  background: linear-gradient(rgba(0, 0, 255, 0.75), rgba(0, 0, 255, 0.30)),
+  background:
+    linear-gradient(rgba(0, 0, 255, 0.75), rgba(0, 0, 255, 0.3)),
     url("../assets/images/campus_2.webp");
   background-size: cover;
   background-position: center;
@@ -406,7 +407,9 @@ header.scrolled {
   padding: 30px 20px;
   text-align: center;
   box-shadow: 0 0 10px 1px rgba(197, 48, 48, 0.43);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -1136,10 +1139,8 @@ footer input[type="email"] {
 }
 
 @media (max-width: 400px) {
-
-  .hero{
+  .hero {
     margin-top: 80px;
-    
   }
   .logo span {
     display: none;
@@ -1161,5 +1162,22 @@ footer input[type="email"] {
   .nav-links a.active {
     color: rgb(0, 0, 255);
     border-bottom: 2px solid transparent;
+  }
+}
+/* scroll animation */
+.scroll-animation {
+  animation: scaleReveal linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes scaleReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

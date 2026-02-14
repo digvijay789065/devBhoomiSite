@@ -9,7 +9,7 @@ const Notice = ({
 }) => {
   return (
     <div>
-      <section className="notice" id="notice">
+      <section className="notice scroll-animation" id="notice">
         <div className="container">
           <div className="section-title">
             <h2>Notice Board</h2>

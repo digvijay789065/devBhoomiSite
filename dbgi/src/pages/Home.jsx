@@ -348,10 +348,10 @@ const Home = () => {
       />
 
       {/* Stats Section */}
-      <section className="stats-section" ref={statsSectionRef} id="stats">
+      <section className="stats-section " ref={statsSectionRef} id="stats">
         <div className="stats-container">
           {statsData.map((stat, index) => (
-            <div className="stat-card" key={index}>
+            <div className="stat-card scroll-animation" key={index}>
               <div
                 className="stat-number"
                 id={stat.id}
@@ -413,7 +413,7 @@ const Home = () => {
                   "Prepare for careers in medicine, nursing, pharmacy, and public health with our comprehensive health sciences programs.",
               },
             ].map((program, index) => (
-              <div className="program-card" key={index}>
+              <div className="program-card scroll-animation" key={index}>
                 <div className="program-img">
                   <img src={program.img} alt={program.alt} />
                 </div>
@@ -423,7 +423,6 @@ const Home = () => {
                   <Link 
                     to="/pages/courses"
                     className="btn"
-                    rel="noopener noreferrer"
                   >
                     Learn More
                   </Link>
@@ -440,7 +439,7 @@ const Home = () => {
       </section>
       
       {/* Testimonials Section */}
-      <section className="testimonials" id="testimonials">
+      <section className="testimonials scroll-animation" id="testimonials">
         <div className="container">
           <div className="section-title">
             <h2>What Our Students Say</h2>

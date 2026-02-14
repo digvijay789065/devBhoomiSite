@@ -21,19 +21,19 @@ const About = (
               {titleDescription}
             </p>
           </div>
-          <div className="about-content">
+          <div className="about-content scroll-animation">
             <div className="about-text">
               <h3>{contentHeading}</h3>
               <p>
                 {contentDescription}
               </p>
               {showButtons && (
-                <Link to="/pages/about-us" className="btn about-cta">
+                <Link to="/pages/about-us" className="btn about-cta scroll-animation">
                   {btnText}
                 </Link>
               )}
             </div>
-            <div className="about-image">
+            <div className="about-image scroll-animation">
               <img src={campus1} alt="DBGI Campus" />
             </div>
           </div>
